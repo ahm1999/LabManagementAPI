@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
-    internal class LabTest
+    public class LabTest:BaseEntity
     {
+        public string? TestName { get; set; }
+
+
     }
 }

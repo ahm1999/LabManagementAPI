@@ -1,13 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace Infrastructure.Identity
 {
-    public class User:IdentityUser
+    public class User:IdentityUser,IUser
     {
+        public ICollection<LabTest>? LabTests { get; set; }
     }
 }

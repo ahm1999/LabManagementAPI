@@ -21,7 +21,8 @@ namespace API_Presentation
 
             string ConnnectionString = builder.Configuration.GetConnectionString("SqlServer")!;
             builder.Services.RegisterDb(ConnnectionString);
-
+            builder.Services.RegisterEntitiesServices();
+            builder.Services.AddHttpContextAccessor();
             builder.Services.AddIdentityApiEndpoints<User>()
                             .AddRoles<IdentityRole>()
                             .AddEntityFrameworkStores<ApplicationDBContext>();
